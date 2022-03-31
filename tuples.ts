@@ -11,7 +11,7 @@ function add3DCoordinate(c1: ThreeDCoordinate, c2: ThreeDCoordinate): ThreeDCoor
 console.log(add3DCoordinate([1, 2, 3], [10, 20, 30]));
 
 
-function simpleStringState(initial: string): [() => string, (v: string) => void] {
+function simpleStringState1(initial: string): [() => string, (v: string) => void] {
     let str: string = initial;
     return [
         () => str,
@@ -21,7 +21,7 @@ function simpleStringState(initial: string): [() => string, (v: string) => void]
     ]
 }
 
-const [str1Getter, str1Setting] = simpleStringState('Hello');
+const [str1Getter, str1Setting] = simpleStringState1('Hello');
 console.log(str1Getter());
 str1Setting('test');
 console.log(str1Getter());
