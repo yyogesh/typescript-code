@@ -21,9 +21,9 @@ const englishLoadingStates = {
     [LoadingState.beforeLoad]: "Before Load"
 }
 
-function sendEvent(name: 'checkout', data: { cartCount: number }): void;
-function sendEvent(name: 'abc', data: unknown): void {
+function sendEvent1(name: 'checkout', data: { cartCount: number }): void;
+function sendEvent1(name: 'abc', data: unknown): void {
     console.log(`${name} : ${JSON.stringify(data)}`)
 }
 
-sendEvent('checkout', { cartCount: 1 })
+sendEvent1('checkout', { cartCount: 1 })
